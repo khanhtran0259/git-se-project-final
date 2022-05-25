@@ -16,7 +16,7 @@ namespace FinalSE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formReport());
+            Application.Run(new Mainform());
         }
     }
 }

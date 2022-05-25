@@ -47,5 +47,12 @@ namespace FinalSE
             adapter.Dispose();
             
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Mainform frm = new Mainform();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
