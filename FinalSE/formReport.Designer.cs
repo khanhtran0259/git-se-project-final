@@ -47,6 +47,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnReport = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -55,42 +56,47 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(246, 9);
+            this.label1.Location = new System.Drawing.Point(328, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 46);
+            this.label1.Size = new System.Drawing.Size(293, 58);
             this.label1.TabIndex = 2;
             this.label1.Text = "THỐNG KÊ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 90);
+            this.label2.Location = new System.Drawing.Point(27, 111);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tháng";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 119);
+            this.label3.Location = new System.Drawing.Point(27, 146);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Năm";
             // 
             // txtMonth
             // 
-            this.txtMonth.Location = new System.Drawing.Point(100, 90);
+            this.txtMonth.Location = new System.Drawing.Point(133, 111);
+            this.txtMonth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMonth.Name = "txtMonth";
-            this.txtMonth.Size = new System.Drawing.Size(100, 20);
+            this.txtMonth.Size = new System.Drawing.Size(132, 22);
             this.txtMonth.TabIndex = 5;
             // 
             // txtYear
             // 
-            this.txtYear.Location = new System.Drawing.Point(100, 119);
+            this.txtYear.Location = new System.Drawing.Point(133, 146);
+            this.txtYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(100, 20);
+            this.txtYear.Size = new System.Drawing.Size(132, 22);
             this.txtYear.TabIndex = 6;
             // 
             // dataGridView1
@@ -100,33 +106,41 @@
             this.colIDReceipt,
             this.colDate,
             this.colSumMoney});
-            this.dataGridView1.Location = new System.Drawing.Point(330, 69);
+            this.dataGridView1.Location = new System.Drawing.Point(440, 85);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 151);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(591, 186);
             this.dataGridView1.TabIndex = 7;
             // 
             // colIDReceipt
             // 
             this.colIDReceipt.HeaderText = "Mã đơn hàng";
+            this.colIDReceipt.MinimumWidth = 6;
             this.colIDReceipt.Name = "colIDReceipt";
+            this.colIDReceipt.Width = 125;
             // 
             // colDate
             // 
             this.colDate.HeaderText = "Ngày đặt hàng";
+            this.colDate.MinimumWidth = 6;
             this.colDate.Name = "colDate";
             this.colDate.Width = 200;
             // 
             // colSumMoney
             // 
             this.colSumMoney.HeaderText = "Tổng tiền";
+            this.colSumMoney.MinimumWidth = 6;
             this.colSumMoney.Name = "colSumMoney";
+            this.colSumMoney.Width = 125;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 274);
+            this.label4.Location = new System.Drawing.Point(24, 337);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Hàng nhập/xuất";
             // 
@@ -136,9 +150,10 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Hàng nhập",
             "Hàng xuất"});
-            this.comboBox1.Location = new System.Drawing.Point(109, 271);
+            this.comboBox1.Location = new System.Drawing.Point(145, 334);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
             this.comboBox1.TabIndex = 9;
             // 
             // dataGridView2
@@ -151,57 +166,82 @@
             this.colPrice,
             this.dataGridViewTextBoxColumn1,
             this.colSum});
-            this.dataGridView2.Location = new System.Drawing.Point(30, 313);
+            this.dataGridView2.Location = new System.Drawing.Point(40, 385);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(758, 184);
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(1011, 226);
             this.dataGridView2.TabIndex = 10;
             // 
             // colProductID
             // 
             this.colProductID.HeaderText = "Mã sản phẩm";
+            this.colProductID.MinimumWidth = 6;
             this.colProductID.Name = "colProductID";
+            this.colProductID.Width = 125;
             // 
             // colNameProduct
             // 
             this.colNameProduct.HeaderText = "Tên sản phẩm";
+            this.colNameProduct.MinimumWidth = 6;
             this.colNameProduct.Name = "colNameProduct";
             this.colNameProduct.Width = 200;
             // 
             // colQuantity
             // 
             this.colQuantity.HeaderText = "Số lượng";
+            this.colQuantity.MinimumWidth = 6;
             this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Width = 125;
             // 
             // colPrice
             // 
             this.colPrice.HeaderText = "Đơn giá";
+            this.colPrice.MinimumWidth = 6;
             this.colPrice.Name = "colPrice";
+            this.colPrice.Width = 125;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Ngày";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 120;
             // 
             // colSum
             // 
             this.colSum.HeaderText = "Thành tiền";
+            this.colSum.MinimumWidth = 6;
             this.colSum.Name = "colSum";
+            this.colSum.Width = 125;
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(100, 164);
+            this.btnReport.Location = new System.Drawing.Point(133, 202);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(90, 35);
+            this.btnReport.Size = new System.Drawing.Size(120, 43);
             this.btnReport.TabIndex = 11;
             this.btnReport.Text = "Thống kê";
             this.btnReport.UseVisualStyleBackColor = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(951, 11);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(100, 28);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // formReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 509);
+            this.ClientSize = new System.Drawing.Size(1067, 626);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.comboBox1);
@@ -212,8 +252,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formReport";
             this.Text = "formReport";
+            this.Load += new System.EventHandler(this.formReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -242,5 +284,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSum;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnBack;
     }
 }

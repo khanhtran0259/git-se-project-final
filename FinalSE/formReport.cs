@@ -16,5 +16,17 @@ namespace FinalSE
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form frmMain = new Mainform();
+            this.Hide();
+            frmMain.Show();
+        }
+
+        private void formReport_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

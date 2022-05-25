@@ -16,7 +16,7 @@ namespace FinalSE
     public partial class formImport : Form
     {
         public int ImportID;
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn1"].ConnectionString);
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn2"].ConnectionString);
         public formImport()
         {
             InitializeComponent();
@@ -29,9 +29,31 @@ namespace FinalSE
 
         private void cbxProductName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            String sSQL = "EXEC new_receiptNote @date = getDate() as 'Max'";
+            SqlCommand sqlCommand = new SqlCommand(sSQL);
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+
+            SqlCommand cmd = new SqlCommand("SELECT MAX(id) FROM RECEIPTNOTE");
+            ImportID = (int)cmd.ExecuteScalar();
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form frmMain = new Mainform();
+            this.Hide();
+            frmMain.Show();
+        }
+
+        private void formImport_Load(object sender, EventArgs e)
+        {
             string sSQL;
             sSQL = "SELECT * FROM PRODUCT";
-            SqlCommand sqlCommand = new SqlCommand(sSQL);
+            SqlCommand sqlCommand = new SqlCommand(sSQL,conn);
             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -46,17 +68,7 @@ namespace FinalSE
                 MessageBox.Show("NONE DATA!");
             }
             adapter.Dispose();
-            
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            String sSQL = "EXEC new_receiptNote @date = getDate() as 'Max'";
-            SqlCommand sqlCommand = new SqlCommand(sSQL);
-            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
-
-            SqlCommand cmd = new SqlCommand("SELECT MAX(id) FROM RECEIPTNOTE");
-            ImportID = (int)cmd.ExecuteScalar();
-        }
     }
 }
