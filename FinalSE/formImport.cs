@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalSE
 {
-    public partial class Form1 : Form
+    public partial class formImport : Form
     {
-        public Form1()
+        public formImport()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace FinalSE
 {
-    partial class Form1
+    partial class formImport
     {
         /// <summary>
         /// Required designer variable.
@@ -162,7 +162,7 @@
             this.colSum.HeaderText = "Thành tiền";
             this.colSum.Name = "colSum";
             // 
-            // Form1
+            // formImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,7 +176,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "formImport";
             this.Text = "frmImport";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
