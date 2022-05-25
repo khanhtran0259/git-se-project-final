@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace FinalSE
 {
     public partial class formImport : Form
     {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn1"].ConnectionString);
         public formImport()
         {
             InitializeComponent();
