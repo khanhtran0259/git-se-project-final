@@ -15,6 +15,7 @@ namespace FinalSE
 {
     public partial class formImport : Form
     {
+        public int ImportID;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Myconn1"].ConnectionString);
         public formImport()
         {
@@ -46,6 +47,16 @@ namespace FinalSE
             }
             adapter.Dispose();
             
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            String sSQL = "EXEC new_receiptNote @date = getDate() as 'Max'";
+            SqlCommand sqlCommand = new SqlCommand(sSQL);
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+
+            SqlCommand cmd = new SqlCommand("SELECT MAX(id) FROM RECEIPTNOTE");
+            ImportID = (int)cmd.ExecuteScalar();
         }
     }
 }

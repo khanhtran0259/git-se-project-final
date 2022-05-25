@@ -124,6 +124,7 @@
             this.btnCreate.TabIndex = 7;
             this.btnCreate.Text = "Tạo đơn";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // dataGridView1
             // 
