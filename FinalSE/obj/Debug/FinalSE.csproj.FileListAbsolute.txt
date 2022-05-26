@@ -25,3 +25,4 @@ C:\Users\Admin\Desktop\Applications Exercises\finalSE\FinalSE\obj\Debug\FinalSE.
 C:\Users\Admin\Desktop\Applications Exercises\finalSE\FinalSE\obj\Debug\FinalSE.exe
 C:\Users\Admin\Desktop\Applications Exercises\finalSE\FinalSE\obj\Debug\FinalSE.pdb
 C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.Mainform.resources
+C:\Users\Admin\Desktop\Applications Exercises\finalSE\FinalSE\obj\Debug\FinalSE.Mainform.resources

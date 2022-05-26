@@ -51,72 +51,81 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(233, 9);
+            this.label1.Location = new System.Drawing.Point(311, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 46);
+            this.label1.Size = new System.Drawing.Size(329, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "NHẬP HÀNG";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 89);
+            this.label2.Location = new System.Drawing.Point(88, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Sản phẩm";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 125);
+            this.label3.Location = new System.Drawing.Point(88, 154);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(60, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số lượng";
             // 
             // cbxProductName
             // 
             this.cbxProductName.FormattingEnabled = true;
-            this.cbxProductName.Location = new System.Drawing.Point(198, 89);
+            this.cbxProductName.Location = new System.Drawing.Point(264, 110);
+            this.cbxProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxProductName.Name = "cbxProductName";
-            this.cbxProductName.Size = new System.Drawing.Size(216, 21);
+            this.cbxProductName.Size = new System.Drawing.Size(287, 24);
             this.cbxProductName.TabIndex = 3;
             this.cbxProductName.SelectedIndexChanged += new System.EventHandler(this.cbxProductName_SelectedIndexChanged);
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(198, 125);
+            this.txtQuantity.Location = new System.Drawing.Point(264, 154);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(132, 22);
             this.txtQuantity.TabIndex = 4;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(664, 76);
+            this.btnAdd.Location = new System.Drawing.Point(885, 94);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(100, 28);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(664, 115);
+            this.btnDelete.Location = new System.Drawing.Point(885, 142);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(100, 28);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(664, 153);
+            this.btnCreate.Location = new System.Drawing.Point(885, 188);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 23);
+            this.btnCreate.Size = new System.Drawing.Size(100, 28);
             this.btnCreate.TabIndex = 7;
             this.btnCreate.Text = "Tạo đơn";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // dataGridView1
             // 
@@ -128,10 +137,11 @@
             this.colPrice,
             this.colDate,
             this.colSum});
-            this.dataGridView1.Location = new System.Drawing.Point(52, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(69, 236);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(743, 238);
+            this.dataGridView1.Size = new System.Drawing.Size(991, 293);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -179,9 +189,10 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(745, 9);
+            this.btnBack.Location = new System.Drawing.Point(993, 11);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(100, 28);
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -189,9 +200,9 @@
             // 
             // formImport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 450);
+            this.ClientSize = new System.Drawing.Size(1109, 554);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCreate);
@@ -202,8 +213,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formImport";
             this.Text = "frmImport";
+            this.Load += new System.EventHandler(this.formImport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

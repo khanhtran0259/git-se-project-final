@@ -19,9 +19,14 @@ namespace FinalSE
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Mainform frm = new Mainform();
-            frm.Show();
+            Form frmMain = new Mainform();
             this.Hide();
+            frmMain.Show();
+        }
+
+        private void formReport_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
