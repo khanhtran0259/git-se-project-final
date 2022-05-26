@@ -91,7 +91,6 @@ namespace FinalSE
             conn.Open();
             int prdId = Int32.Parse(cbxProductName.SelectedValue.ToString());
             String sSQL = "EXEC add_ReceiveProduct @noteId = "+ImportID+", @productId = "+prdId+", @quantity = "+ txtQuantity.Text;
-            MessageBox.Show(sSQL);
             SqlCommand sqlCommand = new SqlCommand(sSQL,conn);
             try
             {
@@ -114,7 +113,6 @@ namespace FinalSE
             MessageBox.Show("Choosed ReceiveProduct id = " + row.Cells[0].Value.ToString());
                 String sSQL = "EXEC remove_ReceiveProduct @noteId = " + ImportID + ", @productId = " + row.Cells[0].Value.ToString();
                 SqlCommand cmd = new SqlCommand(sSQL,conn);
-                MessageBox.Show(sSQL);
                 cmd.ExecuteScalar();
                 DataGridView_Load();
             conn.Close();

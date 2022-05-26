@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SE_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DeliveryNote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="TotalPrice" Type="String" MaxLength="64" FixedLength="true" Unicode="true" />
+    <Property Name="OrderId" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OrderProduct">
+    <Key>
+      <PropertyRef Name="OrderId" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="String" MaxLength="64" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_ORDER_PROD" FromRole="OrderProduct" ToRole="Product" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_PROD_ORDER" FromRole="OrderProduct" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentMethod" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="PaymentStatus" Type="String" MaxLength="64" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="OrderProducts" Relationship="Self.FK_PROD_ORDER" FromRole="Orders" ToRole="OrderProduct" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="String" MaxLength="64" FixedLength="true" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" />
+    <NavigationProperty Name="OrderProducts" Relationship="Self.FK_ORDER_PROD" FromRole="Product" ToRole="OrderProduct" />
+  </EntityType>
+  <Association Name="FK_ORDER_PROD">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="OrderProduct" Type="Self.OrderProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROD_ORDER">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="OrderProduct" Type="Self.OrderProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProduct">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SE_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DeliveryNotes" EntityType="Self.DeliveryNote" />
+    <EntitySet Name="OrderProducts" EntityType="Self.OrderProduct" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <AssociationSet Name="FK_ORDER_PROD" Association="Self.FK_ORDER_PROD">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="OrderProduct" EntitySet="OrderProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROD_ORDER" Association="Self.FK_PROD_ORDER">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderProduct" EntitySet="OrderProducts" />
+    </AssociationSet>
+    <FunctionImport Name="add_item">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="Price" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="add_Order">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="paymentMethod" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="add_OrderProduct">
+      <Parameter Name="orderId" Mode="In" Type="Int32" />
+      <Parameter Name="productId" Mode="In" Type="Int32" />
+      <Parameter Name="quantity" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="add_ReceiveProduct">
+      <Parameter Name="noteId" Mode="In" Type="Int32" />
+      <Parameter Name="productId" Mode="In" Type="Int32" />
+      <Parameter Name="quantity" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="edit_item">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="Price" Mode="In" Type="String" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="fill_ImportedDataGridView" ReturnType="Collection(SE_DBModel.fill_ImportedDataGridView_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="new_receiptNote">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="remove_item">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="remove_OrderProduct">
+      <Parameter Name="orderId" Mode="In" Type="Int32" />
+      <Parameter Name="productId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="remove_ReceiveProduct">
+      <Parameter Name="noteId" Mode="In" Type="Int32" />
+      <Parameter Name="productId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="update_Order" />
+    <FunctionImport Name="update_orderProduct" />
+    <FunctionImport Name="update_receiveProduct" />
+  </EntityContainer>
+  <ComplexType Name="fill_ImportedDataGridView_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="quantity" Nullable="true" />
+    <Property Type="String" Name="price" Nullable="true" MaxLength="64" />
+    <Property Type="DateTime" Name="date" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
+</Schema>

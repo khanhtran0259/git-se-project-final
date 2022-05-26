@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SE_DBModelStoreContainer" CdmEntityContainer="SE_DBEntities">
+    <EntitySetMapping Name="DeliveryNotes">
+      <EntityTypeMapping TypeName="SE_DBModel.DeliveryNote">
+        <MappingFragment StoreEntitySet="DeliveryNote">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderProducts">
+      <EntityTypeMapping TypeName="SE_DBModel.OrderProduct">
+        <MappingFragment StoreEntitySet="OrderProduct">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="SE_DBModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="SE_DBModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="add_item" FunctionName="SE_DBModel.Store.add_item" />
+    <FunctionImportMapping FunctionImportName="add_Order" FunctionName="SE_DBModel.Store.add_Order" />
+    <FunctionImportMapping FunctionImportName="add_OrderProduct" FunctionName="SE_DBModel.Store.add_OrderProduct" />
+    <FunctionImportMapping FunctionImportName="add_ReceiveProduct" FunctionName="SE_DBModel.Store.add_ReceiveProduct" />
+    <FunctionImportMapping FunctionImportName="edit_item" FunctionName="SE_DBModel.Store.edit_item" />
+    <FunctionImportMapping FunctionImportName="fill_ImportedDataGridView" FunctionName="SE_DBModel.Store.fill_ImportedDataGridView">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SE_DBModel.fill_ImportedDataGridView_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="new_receiptNote" FunctionName="SE_DBModel.Store.new_receiptNote" />
+    <FunctionImportMapping FunctionImportName="remove_item" FunctionName="SE_DBModel.Store.remove_item" />
+    <FunctionImportMapping FunctionImportName="remove_OrderProduct" FunctionName="SE_DBModel.Store.remove_OrderProduct" />
+    <FunctionImportMapping FunctionImportName="remove_ReceiveProduct" FunctionName="SE_DBModel.Store.remove_ReceiveProduct" />
+    <FunctionImportMapping FunctionImportName="update_Order" FunctionName="SE_DBModel.Store.update_Order" />
+    <FunctionImportMapping FunctionImportName="update_orderProduct" FunctionName="SE_DBModel.Store.update_orderProduct" />
+    <FunctionImportMapping FunctionImportName="update_receiveProduct" FunctionName="SE_DBModel.Store.update_receiveProduct" />
+  </EntityContainerMapping>
+</Mapping>

@@ -70,11 +70,12 @@
             this.colPayMethods,
             this.colSumPrice});
             this.dataGridView1.Location = new System.Drawing.Point(16, 119);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(924, 185);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // colIdReceipt
             // 
@@ -132,11 +133,12 @@
             this.colPrice,
             this.colSum});
             this.dataGridView2.Location = new System.Drawing.Point(16, 354);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(860, 185);
             this.dataGridView2.TabIndex = 4;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // colIDProduct
             // 
@@ -187,7 +189,7 @@
             // btnPrintReceipt
             // 
             this.btnPrintReceipt.Location = new System.Drawing.Point(468, 571);
-            this.btnPrintReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrintReceipt.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintReceipt.Name = "btnPrintReceipt";
             this.btnPrintReceipt.Size = new System.Drawing.Size(141, 48);
             this.btnPrintReceipt.TabIndex = 6;
@@ -197,7 +199,7 @@
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(951, 15);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 28);
             this.btnBack.TabIndex = 13;
@@ -217,7 +219,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formExport";
             this.Text = "formExport";
             this.Load += new System.EventHandler(this.formExport_Load);
