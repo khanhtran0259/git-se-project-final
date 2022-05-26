@@ -125,7 +125,7 @@ namespace FinalSE
 
         private void DataGridView_Load()
         {
-            SqlCommand cmd = new SqlCommand("EXEC fill_ImportedDataGridView @id = "+ImportID, conn);
+            SqlCommand cmd = new SqlCommand("EXEC fill_ImportedDataGridView @id = " + ImportID, conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable tb = new DataTable();
             adapter.Fill(tb);

@@ -30,21 +30,21 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colIdReceipt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDateOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPayMethods = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSumPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.colIDProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPrintReceipt = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaymentMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -64,11 +64,11 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colIdReceipt,
-            this.colDateOrder,
-            this.colStatus,
-            this.colPayMethods,
-            this.colSumPrice});
+            this.Id,
+            this.date,
+            this.Status,
+            this.PaymentMethod,
+            this.Total});
             this.dataGridView1.Location = new System.Drawing.Point(16, 119);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
@@ -76,41 +76,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(924, 185);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // colIdReceipt
-            // 
-            this.colIdReceipt.HeaderText = "Mã đơn hàng";
-            this.colIdReceipt.MinimumWidth = 6;
-            this.colIdReceipt.Name = "colIdReceipt";
-            this.colIdReceipt.Width = 125;
-            // 
-            // colDateOrder
-            // 
-            this.colDateOrder.HeaderText = "Ngày đặt hàng";
-            this.colDateOrder.MinimumWidth = 6;
-            this.colDateOrder.Name = "colDateOrder";
-            this.colDateOrder.Width = 150;
-            // 
-            // colStatus
-            // 
-            this.colStatus.HeaderText = "Trạng thái";
-            this.colStatus.MinimumWidth = 6;
-            this.colStatus.Name = "colStatus";
-            this.colStatus.Width = 150;
-            // 
-            // colPayMethods
-            // 
-            this.colPayMethods.HeaderText = "Phương thức thanh toán";
-            this.colPayMethods.MinimumWidth = 6;
-            this.colPayMethods.Name = "colPayMethods";
-            this.colPayMethods.Width = 150;
-            // 
-            // colSumPrice
-            // 
-            this.colSumPrice.HeaderText = "Thành tiền";
-            this.colSumPrice.MinimumWidth = 6;
-            this.colSumPrice.Name = "colSumPrice";
-            this.colSumPrice.Width = 125;
             // 
             // label2
             // 
@@ -127,10 +92,10 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colIDProduct,
-            this.colNameProduct,
-            this.colQuantity,
-            this.colPrice,
+            this.pid,
+            this.pName,
+            this.opQuantity,
+            this.pPrice,
             this.colSum});
             this.dataGridView2.Location = new System.Drawing.Point(16, 354);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
@@ -139,41 +104,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(860, 185);
             this.dataGridView2.TabIndex = 4;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // colIDProduct
-            // 
-            this.colIDProduct.HeaderText = "Mã đơn hàng";
-            this.colIDProduct.MinimumWidth = 6;
-            this.colIDProduct.Name = "colIDProduct";
-            this.colIDProduct.Width = 125;
-            // 
-            // colNameProduct
-            // 
-            this.colNameProduct.HeaderText = "Tên sản phẩm";
-            this.colNameProduct.MinimumWidth = 6;
-            this.colNameProduct.Name = "colNameProduct";
-            this.colNameProduct.Width = 200;
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.HeaderText = "Số lượng";
-            this.colQuantity.MinimumWidth = 6;
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.Width = 125;
-            // 
-            // colPrice
-            // 
-            this.colPrice.HeaderText = "Đơn giá";
-            this.colPrice.MinimumWidth = 6;
-            this.colPrice.Name = "colPrice";
-            this.colPrice.Width = 125;
-            // 
-            // colSum
-            // 
-            this.colSum.HeaderText = "Thành tiền";
-            this.colSum.MinimumWidth = 6;
-            this.colSum.Name = "colSum";
-            this.colSum.Width = 125;
             // 
             // label3
             // 
@@ -207,6 +137,86 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Mã đơn hàng";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // date
+            // 
+            this.date.DataPropertyName = "date";
+            this.date.HeaderText = "Ngày đặt hàng";
+            this.date.MinimumWidth = 6;
+            this.date.Name = "date";
+            this.date.Width = 150;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Trạng thái";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.Width = 150;
+            // 
+            // PaymentMethod
+            // 
+            this.PaymentMethod.DataPropertyName = "PaymentMethod";
+            this.PaymentMethod.HeaderText = "Phương thức thanh toán";
+            this.PaymentMethod.MinimumWidth = 6;
+            this.PaymentMethod.Name = "PaymentMethod";
+            this.PaymentMethod.Width = 150;
+            // 
+            // Total
+            // 
+            this.Total.DataPropertyName = "Total";
+            this.Total.HeaderText = "Thành tiền";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.Width = 125;
+            // 
+            // pid
+            // 
+            this.pid.DataPropertyName = "id";
+            this.pid.HeaderText = "Mã đơn hàng";
+            this.pid.MinimumWidth = 6;
+            this.pid.Name = "pid";
+            this.pid.Width = 125;
+            // 
+            // pName
+            // 
+            this.pName.DataPropertyName = "Name";
+            this.pName.HeaderText = "Tên sản phẩm";
+            this.pName.MinimumWidth = 6;
+            this.pName.Name = "pName";
+            this.pName.Width = 200;
+            // 
+            // opQuantity
+            // 
+            this.opQuantity.DataPropertyName = "Quantity";
+            this.opQuantity.HeaderText = "Số lượng";
+            this.opQuantity.MinimumWidth = 6;
+            this.opQuantity.Name = "opQuantity";
+            this.opQuantity.Width = 125;
+            // 
+            // pPrice
+            // 
+            this.pPrice.DataPropertyName = "Price";
+            this.pPrice.HeaderText = "Đơn giá";
+            this.pPrice.MinimumWidth = 6;
+            this.pPrice.Name = "pPrice";
+            this.pPrice.Width = 125;
+            // 
+            // colSum
+            // 
+            this.colSum.DataPropertyName = "Total";
+            this.colSum.HeaderText = "Thành tiền";
+            this.colSum.MinimumWidth = 6;
+            this.colSum.Name = "colSum";
+            this.colSum.Width = 125;
+            // 
             // formExport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,20 +244,20 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIdReceipt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDateOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPayMethods;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSumPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIDProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNameProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSum;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnPrintReceipt;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaymentMethod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSum;
     }
 }

@@ -3,7 +3,6 @@ C:\Baitap\C#\FinalSE\FinalSE\FinalSE\bin\Debug\FinalSE.exe
 C:\Baitap\C#\FinalSE\FinalSE\FinalSE\bin\Debug\FinalSE.pdb
 C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.csproj.AssemblyReference.cache
 C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.csproj.SuggestedBindingRedirects.cache
-C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.formImport.resources
 C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.formReport.resources
 C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.formExport.resources
 C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.Properties.Resources.resources
@@ -26,3 +25,4 @@ C:\Users\Admin\Desktop\Applications Exercises\finalSE\FinalSE\obj\Debug\FinalSE.
 C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.Mainform.resources
 C:\Users\Admin\Desktop\Applications Exercises\finalSE\FinalSE\obj\Debug\FinalSE.Mainform.resources
 C:\Users\Admin\Desktop\Applications Exercises\finalSE\FinalSE\obj\Debug\FinalSE.frmDgv1.resources
+C:\Baitap\C#\FinalSE\FinalSE\FinalSE\obj\Debug\FinalSE.frmDgv1.resources
