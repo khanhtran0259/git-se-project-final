@@ -19,7 +19,7 @@ namespace FinalSE
 
         private void btnFormImort_Click(object sender, EventArgs e)
         {
-            formImport form = new formImport();
+            frmDgv1 form = new frmDgv1();
             form.Show();
             this.Hide();
         }
