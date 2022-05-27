@@ -40,7 +40,6 @@ namespace FinalSE
             if (idx < 0 && idx >= dataGridView1.Rows.Count) { return; }
             conn.Open();
             DataGridViewRow row = dataGridView1.Rows[idx];
-            MessageBox.Show("Choosed Orders id = " + row.Cells[0].Value.ToString());
             String sSQL = "EXEC fill_ExportedSubDataGridView @id =" + row.Cells[0].Value.ToString();
             SqlCommand cmd = new SqlCommand(sSQL, conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
